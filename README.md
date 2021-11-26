@@ -78,9 +78,9 @@ Array.from({ length: 10000 }, (_, id) => ({
 
 ### Results:
 ### Encode
-- NetJson.encode: Bytes: 639.745, Time: 20.443 ms
-- JSON.stringify: Bytes: 959.730, Time: 3.377 ms
-- BSON.serialize (npm package: "bson"): Bytes: 918.895, Time: 26.734 ms
+- NetJson.encode: Bytes: 639,745, Time: 20.443 ms
+- JSON.stringify: Bytes: 959,730, Time: 3.377 ms
+- BSON.serialize (npm package: "bson"): Bytes: 918,895, Time: 26.734 ms
 ### Decode
 - NetJson.decode: Time: 49.657 ms
 - JSON.parse: Time: 3.148 ms
