@@ -23,7 +23,7 @@ const encodedPlayerBinary = NetJson.encode(player);
 const decodedPlayer = NetJson.decode(encodedPlayerBinary);
 ```
 
-# Comparison to JSON.stringify/parse
+# Comparisons
 
 On a MacBook Air M1, in Node.js Version: 16.13.0 LTS.
 
@@ -55,11 +55,12 @@ On a MacBook Air M1, in Node.js Version: 16.13.0 LTS.
 ### Results:
 ### Encode
 - NetJson.encode: Bytes: 186, Time: 0.311 ms
-- JSON.stringify: Bytes: 234, Time: 0.005 ms
+- JSON.stringify: Bytes: 234, Time: 0.009 ms
+- BSON.serialize (npm package: "bson"): Bytes: 274, Time: 0.534 ms
 ### Decode
-- NetJson.decode: Time: 0.329 ms
-- JSON.parse: Time: 0.005 ms
-
+- NetJson.decode: Time: 0.304 ms
+- JSON.parse: Time: 0.008 ms
+- BSON.deserialize (npm package: "bson"): Time: 0.486 ms
 ## Comparison - 2
 
 ### Data:
@@ -79,9 +80,11 @@ Array.from({ length: 10000 }, (_, id) => ({
 ### Encode
 - NetJson.encode: Bytes: 639.745, Time: 20.443 ms
 - JSON.stringify: Bytes: 959.730, Time: 3.377 ms
+- BSON.serialize (npm package: "bson"): Bytes: 918.895, Time: 26.734 ms
 ### Decode
 - NetJson.decode: Time: 49.657 ms
 - JSON.parse: Time: 3.148 ms
+- BSON.deserialize (npm package: "bson"): Time: 25.226 ms
 
 ## License
 
