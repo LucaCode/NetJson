@@ -1,0 +1,47 @@
+/*
+Author: Ing. Luca Gian Scaringella
+GitHub: LucaCode
+Copyright(c) Ing. Luca Gian Scaringella
+ */
+
+export const enum Token {
+    False = 0,
+    UInt8 = 1,
+    SInt8 = 2,
+    UInt16 = 3,
+    SInt16 = 4,
+    UInt32 = 5,
+    SInt32 = 6,
+    Float32 = 7,
+    Float64 = 8,
+    Null = 11,
+    EmptyObject = 12,
+    EmptyArray = 13,
+    ArrayStart = 14,
+    ContainerEnd = 15,
+    BigUInt8 = 21,
+    BigUInt16 = 22,
+    BigUInt32 = 23,
+    BigUInt64 = 24,
+    BigSInt8 = 31,
+    BigSInt16 = 32,
+    BigSInt32 = 33,
+    BigSInt64 = 34,
+    StringL8 = 101,
+    StringL16 = 102,
+    StringL32 = 103,
+    StringL64 = 104,
+    ObjectStartL8 = 111,
+    ObjectStartL16 = 112,
+    ObjectStartL32 = 113,
+    ObjectStartL64 = 114,
+    PairL8 = 121,
+    PairL16 = 122,
+    PairL32 = 123,
+    PairL64 = 124,
+    BinaryL8 = 131,
+    BinaryL16 = 132,
+    BinaryL32 = 133,
+    BinaryL64 = 134,
+    True = 255,
+}
