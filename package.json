@@ -1,0 +1,57 @@
+{
+  "name": "netjson",
+  "version": "0.0.0",
+  "description": "NetJson",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "license": "MIT",
+  "files": [
+    "dist/**/*",
+    "!.DS_Store"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/LucaCode/NetJson.git"
+  },
+  "author": {
+    "name": "Ing. Luca Gian Scaringella",
+    "email": "lucacode1@gmail.com"
+  },
+  "scripts": {
+    "build": "npm run compile",
+    "compile": "rm -rf dist/ && tsc -p ./",
+    "prepublishOnly": "npm run build",
+    "test": "jest --coverage"
+  },
+  "dependencies": {
+    "fast-text-encoding": "1.0.3",
+    "@types/node": "^14.14.31"
+  },
+  "devDependencies": {
+    "typescript": "^4.5.2",
+    "ts-jest": "^27.0.4",
+    "@types/jest": "^27.0.3",
+    "jest": "^27.0.6",
+    "jest-each": "^27.0.6"
+  },
+  "keywords": [
+    "net",
+    "micro",
+    "binary",
+    "json",
+    "encode",
+    "decode",
+    "fast",
+    "lightway"
+  ],
+  "jest": {
+    "preset": "ts-jest",
+    "testEnvironment": "node",
+    "transform": {
+      "node_modules/variables/.+\\.(j|t)sx?$": "ts-jest"
+    },
+    "transformIgnorePatterns": [
+      "node_modules/(?!variables/.*)"
+    ]
+  }
+}
